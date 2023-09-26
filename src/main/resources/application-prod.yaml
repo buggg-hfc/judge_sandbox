@@ -1,14 +1,11 @@
 spring:
-  profiles:
-    active: dev
-  #    active: @environment@
   datasource:
-    url: jdbc:postgresql://localhost:5432/oj
+    url: jdbc:postgresql://postgres:5432/oj
     password: Lird2002
     username: oj
   data:
     redis:
-      host: localhost
+      host: redis
       port: 6379
       database: 0
       connect-timeout: 3000ms
@@ -19,13 +16,12 @@ spring:
           max-wait: -1
           min-idle: 0
   rabbitmq:
-    host: 127.0.0.1
+    host: rabbitmq
     port: 5672
     username: oj
     password: secret
 server:
-  port: 9090
-
+  port: 8080
 mybatis-plus:
   global-config:
     db-config:
