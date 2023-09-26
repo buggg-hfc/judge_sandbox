@@ -1,7 +1,4 @@
 spring:
-  profiles:
-    active: dev
-  #    active: @environment@
   datasource:
     url: jdbc:postgresql://localhost:5432/oj
     password: Lird2002
@@ -25,7 +22,6 @@ spring:
     password: secret
 server:
   port: 9090
-
 mybatis-plus:
   global-config:
     db-config:
